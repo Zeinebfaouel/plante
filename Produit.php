@@ -28,7 +28,7 @@
 <section>
 <br><br><br><br></section>
 <section>
-        <form>
+        <form  method="get">
         <label for="search">Search</label>
         <input type="text" name="search" id="search" placeholder="Search" value="<?= $search ?>">
         <input type="submit" value="Search"/>

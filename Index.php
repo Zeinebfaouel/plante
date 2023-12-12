@@ -14,7 +14,7 @@
         <h3>fresh flowers</h3>
         <span>natural & beautiful flowers</span>
         <p>test description.</p>
-        <a href="#" class="btn">shop now</a>
+        <a href="http://localhost/plante/produit.php?" class="btn">shop now</a>
     </div>
 </section>
 <section class="about" id="about">
@@ -33,7 +33,7 @@
             </div>
         </div>
     </section>
-<section class="icons-container">
+<section class="icons-container" id="services">
     <div class="icons">
         <img src="free-delivery_411776.png" alt="">
         <div class="info">

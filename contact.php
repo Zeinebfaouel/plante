@@ -13,7 +13,7 @@
 <section class="contact" id="contact">
         <h1 class="heading"><span>contact </span> us</h1>
         <div class="row">
-            <form action="">
+            <form action=""  method="post">
                 <input type="text" placeholder="name" class="box">
                 <input type="email" placeholder="email" class="box">
                 <input type="number" placeholder="number" class="box">

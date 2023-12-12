@@ -4,13 +4,14 @@
         <a href="http://localhost/plante/index.php?">home</a>
         <a href="http://localhost/plante/index.php?#about">about</a>
         <a href="http://localhost/plante/produit.php?">products</a>
-        <a href="http://localhost/plante/index.php?#review">review</a>
+        <a href="http://localhost/plante/index.php?#services">services</a>
         <a href="http://localhost/plante/contact.php?">contact</a>
     </nav>
     <div class="icons">
-        <a href="#" class="fas fa-heart"></a>
+        
         <a href="#" class="fas fa-shopping-cart"></a>
-        <a href="#" class="fas fa-user"></a>
+        <a href="http://localhost/plante/login.php" class="fas fa-user"></a>
+        <a href="http://localhost/plante/signup.php" class="fas fa-plus"></a>
     </div>
 </header>
 <style>
