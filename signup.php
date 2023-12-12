@@ -1,3 +1,26 @@
+<?php 
+include("./bd-connect.php");
+
+if($_SERVER['REQUEST_METHOD'] == "POST")
+{
+session_start();
+$firstname = $_POST['nom'];
+$adress = $_POST['adresse'];
+$gmail = $_POST['email'];
+$password = $_POST['password'];
+
+if(!empty($gmail) && !empty($password) && !is_numeric($gmail))
+{
+   $query = "insert into sign (nom, adresse, email, password) values('$firstname','$adress','$gmail','$password ')";
+
+   mysqli_query($conn,$query);
+   echo"<script type='text/javascript'> alter('Successfully Register')</script>";
+}  
+else{
+   echo "<script>alert('Error : Please fill all fields and use a valid email address');</script>";
+}
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +34,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <?php include("./nav.php")?>
+<form action="" method="POST">
     <div class="container">
         <div class="design">
             <div class="pill-1 rotate-45"></div>
@@ -22,25 +46,22 @@
             <h3 class="title">Create Account</h3>
             <div class="text-input">
                 <i class="ri-user-fill"></i>
-                <input type="text" placeholder="Username">
-            </div>
-            <div class="text-input">
-                <i class="ri-mail-line"></i>
-                <input type="email" placeholder="E-mail">
+                <input type="text" name="nom" placeholder="Username" required>
             </div>
             <div class="text-input">
                 <i class="ri-map-pin-line"></i>
-                <input type="text" placeholder="Adresse">
+                <input type="text"  name="adresse"  placeholder="Adresse" required>
             </div>
             <div class="text-input">
-                <i class="ri-phone-line"></i>
-                <input type="text" placeholder="phone">
+                <i class="ri-mail-line"></i>
+                <input type="email"  name="email"  placeholder="E-mail" required>
             </div>
             <div class="text-input">
                 <i class="ri-lock-fill"></i>
-                <input type="text" placeholder="Password">
+                <input type="password"  name="password"  placeholder="Password" required>
             </div>
-            <button class="login-btn">Create</button>
+            <input type="submit" value="Create" class="login-btn">
+            
           
             <div class="create">
                
@@ -48,6 +69,7 @@
             </div>
         </div>
     </div>
+    </form>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 

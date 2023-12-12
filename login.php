@@ -1,3 +1,36 @@
+<?php 
+session_start();
+include("./bd-connect.php");
+
+if($_SERVER['REQUEST_METHOD'] == "POST")
+{
+
+$gmail = $_POST['email'];
+$password = $_POST['password'];
+
+if(!empty($gmail) && !empty($password) && !is_numeric($gmail))
+{
+   $query = "select * from sign where email = '$gmail' limit 1";
+   $result = mysqli_query($conn, $query);
+
+   if($result)
+   {
+   if($result && mysqli_num_rows($result) > 0)
+   {
+      $user_data = mysqli_fetch_assoc($result);
+
+      if($user_data['password'] == $password)
+      {
+         header("Location: Index.php");
+         die;
+      }
+   }
+   }
+   echo"<script type='text/javascript'> alter('Successfully Register')</script>";
+}
+else echo "<script>alert('Error : Please fill all fields and use a valid email address');</script>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +46,7 @@
 
 <body>
 <?php include("./nav.php")?>
+<form action="" method="POST">
     <div class="container">
         <div class="design">
             <div class="pill-1 rotate-45"></div>
@@ -24,13 +58,13 @@
             <h3 class="title">User Login</h3>
             <div class="text-input">
                 <i class="ri-user-fill"></i>
-                <input type="text" placeholder="Username">
+                <input type="email" name="email"  placeholder="E-mail" required>
             </div>
             <div class="text-input">
                 <i class="ri-lock-fill"></i>
-                <input type="password" placeholder="Password">
+                <input type="password" name="password" placeholder="Password" required>
             </div>
-            <button class="login-btn">LOGIN</button>
+            <input type="submit" value="Login" class="login-btn">
             <a href="#" class="forgot">Forgot Username/Password?</a>
             <div class="create">
                 <a href="http://localhost/plante/signup.php#">Create Your Account</a>
@@ -38,6 +72,7 @@
             </div>
         </div>
     </div>
+</form>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
