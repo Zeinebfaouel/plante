@@ -1,5 +1,5 @@
 :root{
-    --pink:rgba(195, 228, 191, 0.2) 223, 192, 0.2);
+    --pink:rgba((195, 228, 191, 0.2) 223, 192, 0.2);
 }
 *{
     margin: 0; padding: 0;
@@ -132,6 +132,7 @@ header .icons a:hover{
     padding-bottom: .5rem;
     font-size: 1.3rem;
 }
+
 .products .box-container{
     display: flex;
     flex-wrap: wrap;
