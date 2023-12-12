@@ -1,11 +1,11 @@
 <header>
-    <a href="#" class="logo"><span>V</span>ert <span>U</span>nivers </a>
+    <a href="http://localhost/plante/index.php?" class="logo"><span>V</span>ert <span>U</span>nivers </a>
     <nav class="navbar">
-        <a href="home">home</a>
-        <a href="about">about</a>
-        <a href="products">products</a>
-        <a href="review">review</a>
-        <a href="contact">contact</a>
+        <a href="http://localhost/plante/index.php?">home</a>
+        <a href="http://localhost/plante/index.php?#about">about</a>
+        <a href="http://localhost/plante/produit.php?">products</a>
+        <a href="http://localhost/plante/index.php?#review">review</a>
+        <a href="http://localhost/plante/contact.php?">contact</a>
     </nav>
     <div class="icons">
         <a href="#" class="fas fa-heart"></a>

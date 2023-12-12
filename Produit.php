@@ -4,7 +4,7 @@
     $search = '';
     if (isset($_GET) && $_GET && $_GET['search']){
         $search = $_GET['search'];
-        $sql = "SELECT * FROM `produit` WHERE `title` LIKE '%" . $_GET['search'] . "%' or `description` LIKE '%" . $_GET['search'] . "%';";
+        $sql = "SELECT * FROM `produit` WHERE `titre` LIKE '%" . $_GET['search'] . "%' or `description` LIKE '%" . $_GET['search'] . "%';";
     }else {
         $sql = "SELECT * FROM `produit`";
     }
@@ -25,9 +25,46 @@
 </head>
 <body>
 <?php include("./Nav.php")?>
+<section>
+<br><br><br><br></section>
+<section>
+        <form>
+        <label for="search">Search</label>
+        <input type="text" name="search" id="search" placeholder="Search" value="<?= $search ?>">
+        <input type="submit" value="Search"/>
+    </form>
+</section>
 <section class="products" id="products">
+    <style>
+form{
+    flex: 1 1 40rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1) ;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    background: #fff;
+    border-radius: .5rem;
+    grid-template-columns:0.4fr 0.0fr;
+}
+label{
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #347934;
+}
+
+input{
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    margin: .7rem 0;
+}
+</style>
+
         <h1 class="heading">latest <span>products</span></h1>
         <div class="box-container">
+        
         <?php 
             if ($result->num_rows > 0) {
                 // output data of each row
