@@ -9,9 +9,10 @@
     </nav>
     <div class="icons">
         
-        <a href="#" class="fas fa-shopping-cart"></a>
+        
         <a href="http://localhost/plante/login.php" class="fas fa-user"></a>
         <a href="http://localhost/plante/signup.php" class="fas fa-plus"></a>
+        <a href="#" class="fa-solid fa-lock"></a>
     </div>
 </header>
 <style>
