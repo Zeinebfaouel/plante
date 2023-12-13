@@ -27,8 +27,8 @@
             </div>
             <div class="content">
                 <h3>why choose us ?</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis exercitationem aut a possimus maiores, voluptates nesciunt ex repudiandae, commodi eius similique debitis laborum! Laborum sapiente non veniam deleniti quisquam similique.</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque quas harum debitis repellendus excepturi ab enim aut at amet doloremque.</p>
+                <p>Nous nous efforçons de sélectionner soigneusement les plantes disponibles sur notre site en mettant l'accent sur leur rareté, leur beauté et leur durabilité.</p>
+                <p>Nous collaborons étroitement avec des horticulteurs et des experts en plantes de divers horizons pour nous assurer que nos plantes sont de qualité supérieure.</p>
                 <a href="#" class="btn">learn more</a>
 
             </div>
